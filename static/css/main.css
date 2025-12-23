@@ -2211,7 +2211,7 @@ a.meanmenu-reveal {
   font-size: 16px;
   position: relative;
   display: inline-block;
-  padding: 19px 45px;
+  padding: 10px 20px;
   font-weight: bold;
   z-index: 20;
   line-height: 30px;
@@ -2222,6 +2222,13 @@ a.meanmenu-reveal {
 .main_btn button {
   background: transparent;
   border: none;
+}
+
+/* Align hero primary button with secondary outline button */
+.slider1 .main_btn a {
+  padding: 17px 52px;
+  border-radius: 10px;
+  line-height: 26px;
 }
 
 .main_btn:after {
@@ -4066,7 +4073,7 @@ a.meanmenu-reveal {
 }
 
 .slider1__content h1 {
-  font-size: 85px;
+  font-size: 60px;
   font-weight: 600;
   color: #fff;
   letter-spacing: -1px;
@@ -4605,7 +4612,7 @@ a.meanmenu-reveal {
 ===| 12. Service And Feature
 ===================================================*/
 .feature1 {
-  margin-top: -80px;
+  margin-top: 60px;
   position: relative;
   z-index: 1000;
 }
