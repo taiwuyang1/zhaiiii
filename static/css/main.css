@@ -59,7 +59,7 @@ font-family: 'Poppins', sans-serif;
 @import url("default.css");
 
 :root {
-  --primary_color_01: #6864ED;
+  --primary_color_01: #B1040E;
   --primary_color_01_bg: #EEEEFD;
   --secondary_color_01: #33CC79;
   --secondary_color_01_bg: #EBFAF2;
@@ -2352,6 +2352,14 @@ a.meanmenu-reveal {
   line-height: 30px;
   -webkit-box-shadow: 0px 10px 15px rgba(104, 100, 237, 0.15);
   box-shadow: 0px 10px 15px rgba(104, 100, 237, 0.15);
+}
+
+.feature2 .btn3 {
+  font-size: 14px;
+  padding: 10px 32px;
+  border-radius: 0.5rem;
+  margin-top: 10px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.10);
 }
 
 .btn3:hover,
@@ -6842,10 +6850,10 @@ a.meanmenu-reveal {
 .techManagement1__thumb2__imgBox i {
   position: absolute;
   left: 50%;
-  top: 50px;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 110px;
   height: 110px;
   background-color: var(--tertiary_color_01);
