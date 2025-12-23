@@ -2211,7 +2211,7 @@ a.meanmenu-reveal {
   font-size: 16px;
   position: relative;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 17px 52px;
   font-weight: bold;
   z-index: 20;
   line-height: 30px;
@@ -2349,6 +2349,7 @@ a.meanmenu-reveal {
   transition: 0.3s;
   color: var(--heading_color_01);
   background: #fff;
+  line-height: 30px;
   -webkit-box-shadow: 0px 10px 15px rgba(104, 100, 237, 0.15);
   box-shadow: 0px 10px 15px rgba(104, 100, 237, 0.15);
 }
@@ -4802,6 +4803,10 @@ a.meanmenu-reveal {
 
 .service1__item h4 a {
   color: var(--heading_color_01);
+}
+.service1__item p {
+  position: relative;
+  z-index: 20;
 }
 
 .service1__item__thumb {

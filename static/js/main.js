@@ -108,7 +108,8 @@
 
 
     ////////////////////////////////////////////////////
-    // 07. OwlCarousel for home page  
+    // 07. OwlCarousel for home page  (disabled per request)
+    /*
     function homeSlider1() {
         var slider = $('.slider1__active');
         slider.owlCarousel({
@@ -159,6 +160,7 @@
         });
     }
     homeSlider1();
+    */
 
     function homeSlider2() {
         var slider = $('.slider2__active');
