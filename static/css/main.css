@@ -2224,13 +2224,6 @@ a.meanmenu-reveal {
   border: none;
 }
 
-/* Align hero primary button with secondary outline button */
-.slider1 .main_btn a {
-  padding: 17px 52px;
-  border-radius: 10px;
-  line-height: 26px;
-}
-
 .main_btn:after {
   position: absolute;
   content: "";
@@ -9037,11 +9030,12 @@ a.meanmenu-reveal {
 
 .pageTitle1__bg {
   position: absolute;
-  width: calc(100% - 120px);
+  width: calc(100%);
   height: 100%;
   left: 0px;
   top: 0px;
   z-index: -1;
+
 }
 
 .pageTitle1__bg__01 {
@@ -9180,7 +9174,7 @@ a.meanmenu-reveal {
 .pageTitle1__breadCrumb {
   position: absolute;
   bottom: 0px;
-  right: 120px;
+  right: 0;
 }
 
 @media only screen and (max-width: 1599px) {
