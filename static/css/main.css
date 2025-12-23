@@ -4007,7 +4007,7 @@ a.meanmenu-reveal {
   position: relative;
 }
 
-.slider1__item:before {
+/* .slider1__item:before {
   position: absolute;
   content: '';
   right: 0px;
@@ -4030,7 +4030,7 @@ a.meanmenu-reveal {
   .slider1__item:before {
     display: none;
   }
-}
+} */
 
 .slider1__height {
   height: 800px;
