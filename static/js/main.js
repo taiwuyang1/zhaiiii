@@ -108,59 +108,62 @@
 
 
     ////////////////////////////////////////////////////
-    // 07. OwlCarousel for home page  (disabled per request)
-    /*
+    // 07. OwlCarousel for home page
     function homeSlider1() {
         var slider = $('.slider1__active');
-        slider.owlCarousel({
-            loop: true,
-            animateIn: 'fadeIn',
-            animateOut: 'fadeOut',
-            autoplay: true,
-            nav: false,
-            dots: true,
-            navText: ['<i class="ti-angle-double-left"></i>', '<i class="ti-angle-double-right"></i>'],
-            smartSpeed: 450,
-            margin: 0,
-            stagePadding: 0,
-            autoplayTimeout: 8000,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 1
-                },
-                1000: {
-                    items: 1
+        if (slider.length && typeof $.fn.owlCarousel !== 'undefined') {
+            slider.owlCarousel({
+                loop: true,
+                animateIn: 'fadeIn',
+                animateOut: 'fadeOut',
+                autoplay: true,
+                nav: false,
+                dots: true,
+                navText: ['<i class="ti-angle-double-left"></i>', '<i class="ti-angle-double-right"></i>'],
+                smartSpeed: 450,
+                margin: 0,
+                stagePadding: 0,
+                autoplayTimeout: 8000,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
                 }
-            }
-        });
-        slider.on('translate.owl.carousel', function () {
-            var layer = $("[data-animation]");
-            layer.each(function () {
-                var slider_animation = $(this).data('animation');
-                $(this).removeClass('animated ' + slider_animation).css('opacity', '0');
             });
-        });
-        $("[data-delay]").each(function () {
-            var animation_delay = $(this).data('delay');
-            $(this).css('animation-delay', animation_delay);
-        });
-        $("[data-duration]").each(function () {
-            var animation_dutation = $(this).data('duration');
-            $(this).css('animation-duration', animation_dutation);
-        });
-        slider.on('translated.owl.carousel', function () {
-            var layer = slider.find('.owl-item.active').find("[data-animation]");
-            layer.each(function () {
-                var slider_animation = $(this).data('animation');
-                $(this).addClass('animated ' + slider_animation).css('opacity', '1');
+            slider.on('translate.owl.carousel', function () {
+                var layer = $("[data-animation]");
+                layer.each(function () {
+                    var slider_animation = $(this).data('animation');
+                    $(this).removeClass('animated ' + slider_animation).css('opacity', '0');
+                });
             });
-        });
+            $("[data-delay]").each(function () {
+                var animation_delay = $(this).data('delay');
+                $(this).css('animation-delay', animation_delay);
+            });
+            $("[data-duration]").each(function () {
+                var animation_dutation = $(this).data('duration');
+                $(this).css('animation-duration', animation_dutation);
+            });
+            slider.on('translated.owl.carousel', function () {
+                var layer = slider.find('.owl-item.active').find("[data-animation]");
+                layer.each(function () {
+                    var slider_animation = $(this).data('animation');
+                    $(this).addClass('animated ' + slider_animation).css('opacity', '1');
+                });
+            });
+        }
     }
-    homeSlider1();
-    */
+    // Ensure DOM is ready before initializing
+    $(document).ready(function() {
+        homeSlider1();
+    });
 
     function homeSlider2() {
         var slider = $('.slider2__active');
