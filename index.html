@@ -25,6 +25,12 @@
     <!-- CSS here -->
     <link rel="stylesheet" href="static/css/bootstrap.css">
     <link rel="stylesheet" href="static/css/main.css">
+    <style>
+        /* Offset for fixed header */
+        section[id] {
+            scroll-margin-top: 100px;
+        }
+    </style>
 </head>
 
 <body>
@@ -66,7 +72,7 @@
                         <div class="row">
                             <div class="col-xxl-3 col-lg-4">
                                 <div class="header__logo">
-                                    <a href="index.html"><img src="static/picture/logo.png" style="width: 50px;" alt="Caesar Su">
+                                    <a href="#home"><img src="static/picture/logo.png" style="width: 50px;" alt="Caesar Su">
                                         <span>Caesar Su</span></a>
                                 </div>
                             </div>
@@ -74,10 +80,10 @@
                                 <div class="main-menu text-xxl-center text-end">
                                     <nav id="mobile-menu">
                                         <ul>
-                                            <li class="active"><a href="index.html">Home</a></li>
-                                            <li><a href="research.html">Research Agenda</a></li>
-                                            <li><a href="work.html">Selected Work</a></li>
-                                            <li><a href="cv.html">CV / Contact</a></li>
+                                            <li class="active"><a href="#home">Home</a></li>
+                                            <li><a href="#research">Research Agenda</a></li>
+                                            <li><a href="#work">Selected Work</a></li>
+                                            <li><a href="#cv">CV / Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -97,7 +103,7 @@
     <main>
         <!-- |==========================================| -->
         <!-- |=====|| Slider Start ||===============| -->
-        <section class="slider1">
+        <section id="home" class="slider1">
             <div class="slider1__wrapper">
                 <div class="slider1__active owl-carousel owl-theme">
                     <div
@@ -135,10 +141,9 @@
                                                 class="animated fadeInUp">
                                                 <div class="d-flex flex-wrap gap-3">
                                                     <div class="main_btn">
-                                                        <a href="work.html">View Selected Work</a>
+                                                        <a href="#work">View Selected Work</a>
                                                     </div>
-                                                    <a href="venture.html" class="btn3">Venture &amp; Product
-                                                        Innovation</a>
+                                                    <a href="#research" class="btn3">Research Agenda</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -175,9 +180,9 @@
 	                                            <div data-animation="fadeInUp" data-delay=".7s" data-duration=".8s" class="animated fadeInUp">
 	                                                <div class="d-flex flex-wrap gap-3">
 	                                                    <div class="main_btn">
-	                                                        <a href="work.html">See Pilot Results</a>
+	                                                        <a href="#work">See Pilot Results</a>
 	                                                    </div>
-	                                                    <a href="cv.html" class="btn3">View CV</a>
+	                                                    <a href="#cv" class="btn3">View CV</a>
 	                                                </div>
 	                                            </div>
 	                                        </div>
@@ -218,7 +223,7 @@
                                     </div>
                                 </div>
                                 <div class="feature1__content">
-                                    <h4><a href="research.html">Evidence gap</a></h4>
+                                    <h4><a href="#research">Evidence gap</a></h4>
                                     <p>EdTech often “looks effective,” but lacks reproducible evidence standards and
                                         mechanism-level insight.</p>
                                 </div>
@@ -235,7 +240,7 @@
                                     </div>
                                 </div>
                                 <div class="feature1__content">
-                                    <h4><a href="venture.html">Invisible learning process</a></h4>
+                                    <h4><a href="#research">Invisible learning process</a></h4>
                                     <p>When learning processes are not measurable, interventions rely on intuition and
                                         cannot reliably improve over time.</p>
                                 </div>
@@ -252,7 +257,7 @@
                                     </div>
                                 </div>
                                 <div class="feature1__content">
-                                    <h4><a href="venture.html">Scale vs. reality</a></h4>
+                                    <h4><a href="#research">Scale vs. reality</a></h4>
                                     <p>Innovation fails in real schools when implementation constraints and fairness are
                                         not designed in from day one.</p>
                                 </div>
@@ -290,7 +295,7 @@
                                 <div class="service1__item__thumb">
                                     <img src="static/picture/png-img-06.png" alt="PNG">
                                 </div>
-                                <h4><a href="research.html">Measure</a></h4>
+                                <h4><a href="#research">Measure</a></h4>
                                 <p>Define actionable learning indicators beyond test scores—calibrated items, process
                                     signals, and low-burden measures.</p>
                             </div>
@@ -300,7 +305,7 @@
                                 <div class="service1__item__thumb">
                                     <img src="static/picture/png-img-07.png" alt="PNG">
                                 </div>
-                                <h4><a href="venture.html">Intervene</a></h4>
+                                <h4><a href="#research">Intervene</a></h4>
                                 <p>Translate measurements into interventions that are feasible for teachers, students,
                                     and schools—micro-strategies and course improvements.</p>
                             </div>
@@ -310,7 +315,7 @@
                                 <div class="service1__item__thumb">
                                     <img src="static/picture/png-img-08.png" alt="PNG">
                                 </div>
-                                <h4><a href="work.html">Evidence</a></h4>
+                                <h4><a href="#work">Evidence</a></h4>
                                 <p>Use experiments and quasi-experiments, robustness checks, and subgroup analysis to
                                     identify what works, for whom, and under what constraints.</p>
                             </div>
@@ -320,7 +325,7 @@
                                 <div class="service1__item__thumb">
                                     <img src="static/picture/png-img-09.png" alt="PNG">
                                 </div>
-                                <h4><a href="venture.html">Scale</a></h4>
+                                <h4><a href="#research">Scale</a></h4>
                                 <p>Turn evidence into deployable systems: data contracts, evaluation gates, dashboards,
                                     SOPs, and compliance-by-design.</p>
                             </div>
@@ -352,27 +357,27 @@
                         <div class="col-md-4 col_padding">
                             <div class="feature1__item mb-30">
                                 <div class="feature1__content">
-                                    <h4><a href="work.html">United Nations ESCAP — Vietnam SDG4</a></h4>
+                                    <h4><a href="#work">United Nations ESCAP — Vietnam SDG4</a></h4>
                                     <p>Evidence-to-policy pipeline turning SDG data into equity-focused implementation playbooks.</p>
-                                    <a class="btn3" href="work.html">Read the case</a>
+                                    <a class="btn3" href="#work">Read the case</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 col_padding">
                             <div class="feature1__item mb-30">
                                 <div class="feature1__content">
-                                    <h4><a href="venture.html">HETERNAL — LMS to AI classroom</a></h4>
+                                    <h4><a href="#work">HETERNAL — LMS to AI classroom</a></h4>
                                     <p>Instrumentation, evaluation, and teacher tools across higher ed and K–12.</p>
-                                    <a class="btn3" href="venture.html">Explore the venture</a>
+                                    <a class="btn3" href="#work">Explore the work</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 col_padding">
                             <div class="feature1__item mb-30">
                                 <div class="feature1__content">
-                                    <h4><a href="work.html">Tsinghua — MAIC</a></h4>
+                                    <h4><a href="#work">Tsinghua — MAIC</a></h4>
                                     <p>Real-school quasi-experiment, compensatory effects, and classroom-ready routines.</p>
-                                    <a class="btn3" href="work.html">View research + implementation</a>
+                                    <a class="btn3" href="#work">View research + implementation</a>
                                 </div>
                             </div>
                         </div>
@@ -647,9 +652,9 @@
                                                     class="animated fadeInUp">
                                                     <div class="d-flex flex-wrap gap-3">
                                                         <div class="main_btn">
-                                                            <a href="work.html">See Pilot Results</a>
+                                                            <a href="#work">See Pilot Results</a>
                                                         </div>
-                                                        <a href="cv.html" class="btn3">View CV</a>
+                                                        <a href="#cv" class="btn3">View CV</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -759,7 +764,7 @@
                                     
                                 </div>
                                 <div class="main_btn">
-                                    <a href="cv.html">View CV / Contact</a>
+                                    <a href="#cv">View CV / Contact</a>
                                 </div>
                             </div>
                         </div>
@@ -768,9 +773,565 @@
                 </div>
             </div>
         </section> 
-        <!-- |=====|| About End ||=================|
+        <!-- |=====|| About End ||=================| -->
+        <!-- |==========================================| -->
 
-        |==========================================| -->
+
+        <!-- |==========================================| -->
+        <!-- |=====|| Research Agenda Start ||===============| -->
+        <section id="research" class="feature1 home3 mt-120">
+            <div class="content_box_pob_120_90">
+                <div class="container_m_40 container_l">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2 col_padding">
+                            <div class="title text-center mb-60">
+                                <h5>Research Agenda</h5>
+                                <h2>The long-term questions guiding my work</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6 col_padding">
+                            <div class="feature1__item mb-30">
+                                <div class="feature1__thumbBox d-flex justify-content-between">
+                                    <div class="feature1__thumb1">
+                                        <img src="static/picture/png-icon-01.png" alt="Icon">
+                                    </div>
+                                    <div class="feature1__thumb2">
+                                        <img src="static/picture/png-icon-02.png" alt="Icon">
+                                    </div>
+                                </div>
+                                <div class="feature1__content">
+                                    <h4>Actionable measurement</h4>
+                                    <p>How can we measure learning in ways that are valid, interpretable, and feasible for everyday classrooms?</p>
+                                    <p class="mt-15">I focus on measurement systems that are not just statistically sound, but decision-relevant—able to inform instruction, support, and iteration.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col_padding">
+                            <div class="feature1__item mb-30">
+                                <div class="feature1__thumbBox d-flex justify-content-between">
+                                    <div class="feature1__thumb1">
+                                        <img src="static/picture/png-icon-03.png" alt="Icon">
+                                    </div>
+                                    <div class="feature1__thumb2">
+                                        <img src="static/picture/png-icon-04.png" alt="Icon">
+                                    </div>
+                                </div>
+                                <div class="feature1__content">
+                                    <h4>Evidence standards for EdTech &amp; AI classrooms</h4>
+                                    <p>What should count as evidence for educational technologies—especially AI-mediated learning experiences?</p>
+                                    <p class="mt-15">I care about reproducibility, guardrails, robustness, and subgroup effects: not only "does it work," but "for whom, when, and why."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col_padding">
+                            <div class="feature1__item mb-30">
+                                <div class="feature1__thumbBox d-flex justify-content-between">
+                                    <div class="feature1__thumb1">
+                                        <img src="static/picture/png-icon-05.png" alt="Icon">
+                                    </div>
+                                    <div class="feature1__thumb2">
+                                        <img src="static/picture/png-icon-06.png" alt="Icon">
+                                    </div>
+                                </div>
+                                <div class="feature1__content">
+                                    <h4>Scaling without drift</h4>
+                                    <p>How do we translate evidence into scalable systems without losing fidelity under real constraints?</p>
+                                    <p class="mt-15">Implementation constraints (time, hardware, connectivity, compliance, teacher workload) are not afterthoughts—they shape what is true and what is scalable.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- |=====|| Research Agenda End ||=================| -->
+        <!-- |==========================================| -->
+
+
+        <!-- |==========================================| -->
+        <!-- |=====|| Methods Start ||===============| -->
+        <section class="service1">
+            <div class="service1__padding">
+                <div class="container_m container_l">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2">
+                            <div class="title text-center mb-60">
+                                <h5>Methods &amp; lenses</h5>
+                                <h2>A toolkit for <span>reproducible</span> evidence</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row service1_row">
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="service1__item">
+                                <div class="service1__item__thumb">
+                                    <img src="static/picture/png-img-06.png" alt="Icon">
+                                </div>
+                                <h4>Measurement &amp; calibration</h4>
+                                <p>Item response theory (IRT), knowledge tracing (BKT/DKT), validity/reliability checks, rater consistency, minimal detectable change, fairness audits (e.g., DIF).</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="service1__item">
+                                <div class="service1__item__thumb">
+                                    <img src="static/picture/png-img-07.png" alt="Icon">
+                                </div>
+                                <h4>Experimental &amp; quasi-experimental evaluation</h4>
+                                <p>A/B testing, variance reduction (e.g., CUPED), heterogeneity analysis, ANCOVA and baseline adjustment, matched designs and difference-in-differences when randomization is constrained.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="service1__item">
+                                <div class="service1__item__thumb">
+                                    <img src="static/picture/png-img-08.png" alt="Icon">
+                                </div>
+                                <h4>Process data &amp; monitoring</h4>
+                                <p>Event logging and data contracts, time-window modeling, confidence calibration, subgroup monitoring, error taxonomies, and iterative evaluation pipelines.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="service1__item">
+                                <div class="service1__item__thumb">
+                                    <img src="static/picture/png-img-09.png" alt="Icon">
+                                </div>
+                                <h4>Implementation translation</h4>
+                                <p>Turning evidence into operational artifacts: SOPs, dashboards, rubrics, briefs + technical annexes, and scalable training routines for schools and teams.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- |=====|| Methods End ||=================| -->
+        <!-- |==========================================| -->
+
+
+        <!-- |==========================================| -->
+        <!-- |=====|| Near-term Directions Start ||===============| -->
+        <section>
+            <div class="content_box_120">
+                <div class="container_m container_l">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="title mb-30">
+                                <h5>Near-term directions</h5>
+                                <h2>What I'm building next</h2>
+                            </div>
+                            <p><strong>From outcome to process:</strong> expand beyond test and survey outcomes into richer process traces (learning paths, interaction patterns, teacher–AI–student dynamics).</p>
+                            <p><strong>Compensatory effects at scale:</strong> identify when AI-enabled systems reduce gaps (vs. reinforcing them), and validate mechanisms in realistic settings.</p>
+                            <p><strong>Evaluation infrastructure:</strong> build reusable "evidence gates" for product iteration—metrics, guardrails, and protocols that survive scaling.</p>
+                            <div class="main_btn mt-35">
+                                <a href="#work">View Selected Work</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- |=====|| Near-term Directions End ||=================| -->
+        <!-- |==========================================| -->
+
+
+        <!-- |==========================================| -->
+        <!-- |=====|| Selected Work Start ||===============| -->
+        <section id="work" class="blog1 mt-120">
+            <div class="content_box_120_70">
+                <div class="container_m_40 container_l">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2 col_padding">
+                            <div class="title text-center mb-60">
+                                <h5>Selected Work</h5>
+                                <h2>Projects built to produce <span>evidence</span> and deployable artifacts</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col_padding">
+                            <div class="blog1__item mb-50">
+                                <div class="blog1__item__thumb">
+                                    <img class="img_100" src="static/picture/blog-01.jpg" alt="UN ESCAP — Vietnam SDG4">
+                                    <div class="blog1__item__thumb__data">
+                                        <h4>UN</h4>
+                                        <p>ESCAP</p>
+                                    </div>
+                                </div>
+                                <div class="blog1__item__content">
+                                    <h2>Vietnam SDG4: Evidence-to-Policy Pipeline</h2>
+                                    <p>An end-to-end workflow connecting SDG indicators to equity diagnostics, uncertainty-aware reporting, and implementable intervention packages for local decision-makers.</p>
+                                    <a class="btn2" href="#un-escap">
+                                        <img src="static/picture/png-icon-11.png" alt="PNG">
+                                        <span>Read</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col_padding">
+                            <div class="blog1__item mb-50">
+                                <div class="blog1__item__thumb">
+                                    <img class="img_100" src="static/picture/blog-02.jpg" alt="HETERNAL × USYD — Canvas LMS">
+                                    <div class="blog1__item__thumb__data">
+                                        <h4>HET</h4>
+                                        <p>ERNAL</p>
+                                    </div>
+                                </div>
+                                <div class="blog1__item__content">
+                                    <h2>Canvas LMS Augmentation (Communication → Workflows → Integrity)</h2>
+                                    <p>A lightweight AI augmentation layer for Canvas that improves course communication and assignment workflows through traceable data pipelines and reproducible RAG + prompting modules.</p>
+                                    <a class="btn2" href="#heternal-canvas">
+                                        <img src="static/picture/png-icon-11.png" alt="PNG">
+                                        <span>Read</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col_padding">
+                            <div class="blog1__item mb-50">
+                                <div class="blog1__item__thumb">
+                                    <img class="img_100" src="static/picture/blog-03.jpg" alt="Tsinghua University — MAIC">
+                                    <div class="blog1__item__thumb__data">
+                                        <h4>THU</h4>
+                                        <p>MAIC</p>
+                                    </div>
+                                </div>
+                                <div class="blog1__item__content">
+                                    <h2>MAIC: Real-world Quasi-Experiment &amp; Compensatory Effects</h2>
+                                    <p>A high-stakes, school-based evaluation of AI-enabled classroom delivery with quasi-experimental design, mechanism analysis, and equity-oriented interpretation.</p>
+                                    <a class="btn2" href="#tsinghua-maic">
+                                        <img src="static/picture/png-icon-11.png" alt="PNG">
+                                        <span>Read</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col_padding">
+                            <div class="blog1__item mb-50">
+                                <div class="blog1__item__thumb">
+                                    <img class="img_100" src="static/picture/blog-01.jpg" alt="HETERNAL × THU × Haidian — AI classroom">
+                                    <div class="blog1__item__thumb__data">
+                                        <h4>AI</h4>
+                                        <p>K12</p>
+                                    </div>
+                                </div>
+                                <div class="blog1__item__content">
+                                    <h2>Multimodal Classroom Analytics + AI Micro-Strategies</h2>
+                                    <p>A classroom process-data system that transforms multimodal signals into calibrated, teacher-executable micro-strategies—designed for feasibility, interpretability, and fairness monitoring.</p>
+                                    <a class="btn2" href="#heternal-multimodal">
+                                        <img src="static/picture/png-icon-11.png" alt="PNG">
+                                        <span>Read</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col_padding">
+                            <div class="blog1__item mb-50">
+                                <div class="blog1__item__thumb">
+                                    <img class="img_100" src="static/picture/blog-02.jpg" alt="Yuanfudao — Data Science">
+                                    <div class="blog1__item__thumb__data">
+                                        <h4>DS</h4>
+                                        <p>IRT</p>
+                                    </div>
+                                </div>
+                                <div class="blog1__item__content">
+                                    <h2>Yuanfudao — Learning Analytics &amp; Causal Evaluation for Personalization</h2>
+                                    <p>Built a consistent measurement and evaluation stack—data contracts, KPI trees, IRT/BKT calibration, and experiment design—connecting learning outcomes to deployable decision support.</p>
+                                    <a class="btn2" href="#yuanfudao">
+                                        <img src="static/picture/png-icon-11.png" alt="PNG">
+                                        <span>Read</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col_padding">
+                            <div class="blog1__item mb-50">
+                                <div class="blog1__item__thumb">
+                                    <img class="img_100" src="static/picture/blog-03.jpg" alt="Zuoyebang — Course Design">
+                                    <div class="blog1__item__thumb__data">
+                                        <h4>QC</h4>
+                                        <p>DiD</p>
+                                    </div>
+                                </div>
+                                <div class="blog1__item__content">
+                                    <h2>Zuoyebang — Backward Design + Measurement-Driven Course Production (Pre-A1/A1 English)</h2>
+                                    <p>Designed a coherent "goals–content–assessment" system with learning progression, item calibration, fairness checks, and production-ready quality control for large-scale delivery.</p>
+                                    <a class="btn2" href="#zuoyebang">
+                                        <img src="static/picture/png-icon-11.png" alt="PNG">
+                                        <span>Read</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col_padding">
+                            <div class="blog1__item mb-50">
+                                <div class="blog1__item__thumb">
+                                    <img class="img_100" src="static/picture/blog-01.jpg" alt="TAL — Product Design">
+                                    <div class="blog1__item__thumb__data">
+                                        <h4>TAL</h4>
+                                        <p>Math</p>
+                                    </div>
+                                </div>
+                                <div class="blog1__item__content">
+                                    <h2>TAL — Pre-K to G3 Math: Learning Progression → Interaction Design → Evidence Gates</h2>
+                                    <p>Built a full loop from learning standards to measurable indicators, child-friendly interactions, calibrated tasks (IRT/BKT), and experiment-validated iteration that can scale.</p>
+                                    <a class="btn2" href="#tal">
+                                        <img src="static/picture/png-icon-11.png" alt="PNG">
+                                        <span>Read</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- |=====|| Selected Work Grid End ||=================| -->
+        <!-- |==========================================| -->
+
+
+        <!-- |==========================================| -->
+        <!-- |=====|| Work Details Start ||===============| -->
+        <section>
+            <div class="content_box_120">
+                <div class="container_m container_l">
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <div class="title mb-30">
+                                <h5>Case notes</h5>
+                                <h2>Context → Problem → Approach → Artifacts</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="un-escap" class="mb-60">
+                        <div class="title mb-30">
+                            <h5>Policy &amp; systems</h5>
+                            <h2>United Nations ESCAP — Vietnam SDG4: Evidence-to-Policy Pipeline</h2>
+                        </div>
+                        <p><strong>Context:</strong> A six-month project evaluating Vietnam's pathways toward SDG4 (quality education), with a central focus on equity and learning quality.</p>
+                        <p><strong>Problem:</strong> Education systems need decisions that are both data-grounded and implementable. The challenge is turning heterogeneous, noisy indicators into actionable priorities—without overstating what the data can prove.</p>
+                        <p><strong>Approach:</strong> I built a closed-loop pipeline: data harmonization → trend and breakpoint analysis → equity gap curves → scenario planning → implementation translation. The workflow explicitly separated what the data can answer from what it cannot, and packaged findings into both leadership-friendly and technical deliverables.</p>
+                        <p><strong>Evidence &amp; outputs:</strong></p>
+                        <ul>
+                            <li>Clear recovery and divergence patterns across time, region, and subgroup slices</li>
+                            <li>Robustness checks and sensitivity analyses to stress-test conclusions</li>
+                            <li>A "brief + technical annex" deliverable system to enable fast decisions with reproducible detail</li>
+                            <li>GIS dashboards and visualization atlases for spatial targeting</li>
+                        </ul>
+                        <p><strong>Artifacts:</strong> SDG4 briefing (PDF) + technical annex (PDF), interactive dashboard screenshots + short demo clip, methods note (breakpoint detection, decomposition, uncertainty boundaries), and "implementation package" outline (intervention bundle + resource scenarios).</p>
+                    </div>
+
+                    <div id="heternal-canvas" class="mb-60">
+                        <div class="title mb-30">
+                            <h5>Higher-ed platforms</h5>
+                            <h2>HETERNAL × The University of Sydney — Canvas LMS Augmentation (Communication → Workflows → Integrity)</h2>
+                        </div>
+                        <p><strong>Context:</strong> HETERNAL began in Sydney as a higher-ed LMS augmentation initiative focused on reducing friction across announcements, assignments, teacher–student interaction, and academic integrity.</p>
+                        <p><strong>Problem:</strong> Instructors lose time to repeated clarification cycles and inconsistent messaging. Meanwhile, many "AI add-ons" fail because outputs are not traceable, reproducible, or aligned with institutional constraints.</p>
+                        <p><strong>Approach:</strong> I built an architecture that connects registrar/course data to a traceable content store, then uses scenario-based prompting and retrieval-augmented generation so explanations, grading notes, and broadcast communication remain evidence-backed and repeatable.</p>
+                        <p><strong>Evidence &amp; outputs:</strong></p>
+                        <ul>
+                            <li>Reduced communication overhead and improved readability/consistency of course messaging</li>
+                            <li>Demonstrated feasibility for institutional handoff into compliance and integration workflows</li>
+                            <li>Designed the system to be auditable, not just helpful</li>
+                        </ul>
+                        <p><strong>Artifacts:</strong> System diagram (data sources → traceable store → RAG layer → teacher-facing outputs), prompting &amp; retrieval design spec (reproducibility and boundaries), sample UI mockups (announcement drafting, assignment guidance, integrity checks), and "handoff pack" for institutional integration and compliance review.</p>
+                    </div>
+
+                    <div id="tsinghua-maic" class="mb-60">
+                        <div class="title mb-30">
+                            <h5>School-based research</h5>
+                            <h2>Tsinghua University (School of Education) — MAIC: Real-world Quasi-Experiment &amp; Compensatory Effects</h2>
+                        </div>
+                        <p><strong>Context:</strong> In real schools, time is constrained and stakes are high. We evaluated MAIC-supported instruction in a setting where students must improve quickly and where traditional large-class teaching struggles to address heterogeneity.</p>
+                        <p><strong>Problem:</strong> Does an AI-empowered classroom model merely raise averages—or can it produce compensatory effects that help disadvantaged learners catch up?</p>
+                        <p><strong>Approach:</strong> I led the data-to-inference pipeline: consistent sample construction, measurement validation for constructs (e.g., motivation, self-regulated learning, self-efficacy, engagement), baseline adjustment, and subgroup heterogeneity analysis. I used ANCOVA-style adjustments to isolate performance changes beyond baseline differences, and connected quantitative findings with qualitative coding from interviews to test mechanism plausibility.</p>
+                        <p><strong>Evidence &amp; outputs:</strong></p>
+                        <ul>
+                            <li>A coherent story across three layers: overall gains → who benefits most → equity interpretation under baseline control</li>
+                            <li>Mechanism hypotheses supported by qualitative themes (e.g., "safe zone" for asking questions, scaffolding effects)</li>
+                            <li>Practical limitations surfaced: risk of "autopilot learning," experience boundaries, and implementation constraints</li>
+                        </ul>
+                        <p><strong>Artifacts:</strong> Reusable evaluation SOP for quasi-experiments in schools, analysis framework diagram (macro gains → heterogeneity → fairness adjustment), classroom implementation checklist (what must be true for the model to work), and iteration hypotheses that map directly to product/teaching design changes.</p>
+                    </div>
+
+                    <div id="heternal-multimodal" class="mb-60">
+                        <div class="title mb-30">
+                            <h5>AI classrooms</h5>
+                            <h2>HETERNAL × Tsinghua University × Haidian Pilot — Multimodal Classroom Analytics + AI Micro-Strategies</h2>
+                        </div>
+                        <p><strong>Context:</strong> In K–12 classrooms, learning-relevant signals are often invisible in the moment. We piloted a system that aligns classroom events with multimodal signals and turns model outputs into actionable teacher support.</p>
+                        <p><strong>Problem:</strong> How can we quantify engagement and cognitive load in a way that supports teachers—without overwhelming them with complexity or compromising interpretability and equity?</p>
+                        <p><strong>Approach:</strong> I built an end-to-end pipeline: consent and privacy protocol → synchronized data collection → signal preprocessing and quality control → time-window modeling with early/late fusion comparisons → confidence calibration and subgroup monitoring → teacher-facing dashboard focused on trends and threshold triggers. Strategy suggestions were generated with a constrained knowledge base and readability controls, with fast human review.</p>
+                        <p><strong>Evidence &amp; outputs:</strong></p>
+                        <ul>
+                            <li>Robust segment-level prediction performance in cross-school validation (with calibrated confidence)</li>
+                            <li>Improved teacher ratings of feasibility and usefulness of suggestions</li>
+                            <li>Reusable assets across data collection, processing, modeling, and classroom integration</li>
+                        </ul>
+                        <p><strong>Artifacts:</strong> Data collection &amp; alignment protocol, preprocessing and feature engineering spec, calibration + fairness monitoring checklist, and teacher dashboard + strategy library (micro-interventions).</p>
+                    </div>
+
+                    <div id="yuanfudao" class="mb-60">
+                        <div class="title mb-30">
+                            <h5>Industry evaluation</h5>
+                            <h2>Yuanfudao — Learning Analytics &amp; Causal Evaluation for Personalization</h2>
+                        </div>
+                        <p><strong>Context:</strong> A K–12 learning platform needs both operational health metrics and learning metrics, unified in a way that supports iteration decisions.</p>
+                        <p><strong>Problem:</strong> Without consistent instrumentation and evidence gates, it's easy to optimize engagement metrics while failing to improve actual learning outcomes—or to misread correlation as causation.</p>
+                        <p><strong>Approach:</strong> I helped unify event schemas and metric definitions, then integrated measurement calibration (IRT/BKT) and evaluation workflows (A/B, variance reduction, heterogeneity checks). For non-randomizable cases, I used quasi-experimental adjustments to reduce confounding and report uncertainty.</p>
+                        <p><strong>Evidence &amp; outputs:</strong></p>
+                        <ul>
+                            <li>Stable metric definitions with reproducible analysis scripts</li>
+                            <li>Personalized review generation grounded in calibrated task difficulty/knowledge states</li>
+                            <li>Experiment protocols with guardrails to prevent harmful tradeoffs</li>
+                        </ul>
+                        <p><strong>Artifacts:</strong> KPI tree and weekly business review dashboard design, experiment protocol templates + guardrail metrics, and measurement calibration report (IRT/BKT + fairness checks).</p>
+                    </div>
+
+                    <div id="zuoyebang" class="mb-60">
+                        <div class="title mb-30">
+                            <h5>Course &amp; assessment</h5>
+                            <h2>Zuoyebang — Backward Design + Measurement-Driven Course Production (Pre-A1/A1 English)</h2>
+                        </div>
+                        <p><strong>Context:</strong> Early English learning requires careful alignment of objectives, task design, and feedback—especially under low literacy constraints.</p>
+                        <p><strong>Problem:</strong> Content scale often introduces drift: misalignment with objectives, inconsistent difficulty, and uneven quality across cohorts.</p>
+                        <p><strong>Approach:</strong> I used backward design and constructive alignment to define can-do statements and observable indicators, then built learning progression coverage matrices, error taxonomies, and measurement/evaluation workflows (IRT calibration, DIF checks, cohort analytics). Key design choices were validated with experiments and robustness checks where feasible.</p>
+                        <p><strong>Evidence &amp; outputs:</strong></p>
+                        <ul>
+                            <li>Improved alignment between tasks, explanations, and learning objectives</li>
+                            <li>Reusable QC rubrics and monitoring dashboards for sustained quality</li>
+                        </ul>
+                        <p><strong>Artifacts:</strong> Coverage matrix + learning progression spec, item specs + rubric-based QC system, and analytics dashboard design (cohort and item-level diagnostics).</p>
+                    </div>
+
+                    <div id="tal" class="mb-60">
+                        <div class="title mb-30">
+                            <h5>Early math learning</h5>
+                            <h2>TAL Education Group — Pre-K to G3 Math: Learning Progression → Interaction Design → Evidence Gates</h2>
+                        </div>
+                        <p><strong>Context:</strong> Pre-K math learning must be developmentally appropriate, low-burden, and strongly scaffolded—while still measurable and improvable.</p>
+                        <p><strong>Problem:</strong> AI explanations and content generation can create inconsistency unless tightly constrained, evaluated, and quality-controlled.</p>
+                        <p><strong>Approach:</strong> I translated standards into measurable can-do indicators and interaction specs, then built instrumentation and evaluation layers: cohort KPIs, item calibration, and experimental validation for key instructional design choices. Outputs were packaged into production-ready templates and QC routines.</p>
+                        <p><strong>Evidence &amp; outputs:</strong></p>
+                        <ul>
+                            <li>Higher completion and comprehension consistency through tighter scaffolding and QC</li>
+                            <li>Reusable "learn–practice–assess–review" production system</li>
+                        </ul>
+                        <p><strong>Artifacts:</strong> Course blueprint + coverage matrix, interaction and explanation templates (controlled), and evaluation and reporting pack (dashboards + weekly review templates).</p>
+                    </div>
+
+                    <div class="title mt-60 mb-30">
+                        <h5>Additional</h5>
+                        <h2>Short cards</h2>
+                    </div>
+                    <p><strong>East China Normal University — Education LLMs: Data Governance, Alignment &amp; Evaluation</strong><br>Industrial-scale pipeline for educational corpora governance and evaluation—designed to reduce hallucinations, improve teachability, and keep training reproducible.</p>
+                    <p><strong>United Nations Volunteers — Education Intervention Evaluation (Vietnam)</strong><br>Applied difference-in-differences and multilevel models to estimate intervention effects across subgroups, translating findings into policy-facing briefs and uncertainty-aware visuals.</p>
+                </div>
+            </div>
+        </section>
+        <!-- |=====|| Work Details End ||=================| -->
+        <!-- |==========================================| -->
+
+
+        <!-- |==========================================| -->
+        <!-- |=====|| CV Start ||===============| -->
+        <section id="cv" class="mt-120">
+            <div class="content_box_120">
+                <div class="container_m container_l">
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <div class="title mb-30">
+                                <h5>CV</h5>
+                                <h2>Curriculum Vitae</h2>
+                            </div>
+                            <p>For a concise summary of my academic background, research, and professional work, download my CV below.</p>
+                            <div class="d-flex flex-wrap gap-3 mb-35">
+                                <div class="main_btn">
+                                    <a href="#" aria-label="Download CV PDF">Download CV (PDF)</a>
+                                </div>
+                                <a href="#cv" class="btn3">View CV as a page</a>
+                            </div>
+                            <p><strong>Selected experiences aligned to the site narrative:</strong></p>
+                            <p>• United Nations ESCAP — SDG4 evidence-to-policy workflow</p>
+                            <p>• HETERNAL — instrumentation-first product + evaluation infrastructure</p>
+                            <p>• Tsinghua University — real-school quasi-experiments &amp; implementation</p>
+                            <p>• Yuanfudao / Zuoyebang / TAL — measurement (IRT/BKT), evaluation, and production systems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- |=====|| CV End ||=================| -->
+        <!-- |==========================================| -->
+
+
+        <!-- |==========================================| -->
+        <!-- |=====|| Contact Start ||===============| -->
+        <section id="contact" class="service1">
+            <div class="service1__padding">
+                <div class="container_m container_l">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2">
+                            <div class="title text-center mb-60">
+                                <h5>Contact</h5>
+                                <h2>Get in touch</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row service1_row">
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="service1__item">
+                                <div class="service1__item__thumb">
+                                    <img src="static/picture/png-img-06.png" alt="Icon">
+                                </div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:caesar.su7@gmail.com">caesar.su7@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="service1__item">
+                                <div class="service1__item__thumb">
+                                    <img src="static/picture/png-img-07.png" alt="Icon">
+                                </div>
+                                <h4>LinkedIn</h4>
+                                <p><a href="#" aria-label="LinkedIn profile">Add your LinkedIn link</a></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="service1__item">
+                                <div class="service1__item__thumb">
+                                    <img src="static/picture/png-img-08.png" alt="Icon">
+                                </div>
+                                <h4>GitHub</h4>
+                                <p><a href="#" aria-label="GitHub profile">Add your GitHub link</a></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="service1__item">
+                                <div class="service1__item__thumb">
+                                    <img src="static/picture/png-img-09.png" alt="Icon">
+                                </div>
+                                <h4>Google Scholar</h4>
+                                <p><a href="#" aria-label="Google Scholar profile">Add your Google Scholar link</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2 text-center">
+                            <p class="mt-35">I'm always open to conversations about evidence-based EdTech, learning measurement, AI classroom evaluation, and translating research into scalable systems.</p>
+                            <div class="d-flex flex-wrap gap-3 justify-content-center mt-35">
+                                <div class="main_btn">
+                                    <a href="mailto:caesar.su7@gmail.com">Email me</a>
+                                </div>
+                                <a href="mailto:caesar.su7@gmail.com?subject=Schedule a chat" class="btn3">Schedule a chat</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- |=====|| Contact End ||=================| -->
         <!-- |==========================================| -->
 
 
@@ -815,7 +1376,7 @@
                                                 <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="cv.html"><i class="fa-solid fa-angle-right"></i></a></li>
+                                        <li><a href="#cv"><i class="fa-solid fa-angle-right"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -837,7 +1398,7 @@
                                                 <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="cv.html"><i class="fa-solid fa-angle-right"></i></a></li>
+                                        <li><a href="#cv"><i class="fa-solid fa-angle-right"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -859,7 +1420,7 @@
                                                 <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="cv.html"><i class="fa-solid fa-angle-right"></i></a></li>
+                                        <li><a href="#cv"><i class="fa-solid fa-angle-right"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -887,7 +1448,7 @@
                             <h2>Let’s build evidence-based learning systems.</h2>
                             <p>Welcome to conversations about learning measurement, evidence standards, AI classrooms,
                                 and scaling interventions without drift.</p>
-                            <a href="cv.html" class="btn3">Get in touch</a>
+                            <a href="#cv" class="btn3">Get in touch</a>
                         </div>
                     </div>
                 </div>
@@ -905,15 +1466,15 @@
                 <div class="row">
                     <div class="col-lg-8 col_padding">
                         <div class="footer1__bottom__nav text-center text-lg-start">
-                            <a href="cv.html#contact">Email</a>
+                            <a href="#contact">Email</a>
                             <a href="#" aria-label="LinkedIn">LinkedIn</a>
                             <a href="#" aria-label="GitHub">GitHub</a>
-                            <a href="cv.html#cv">CV</a>
+                            <a href="#cv">CV</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col_padding">
                         <div class="footer1__bottom__social text-center text-lg-end">
-                            <a href="cv.html#contact" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="#contact" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         </div>
@@ -958,6 +1519,155 @@
     <script src="static/js/main.js"></script>
     <!-- |=====|| All js End ||=================| -->
     <!-- |==========================================| -->
+    
+    <!-- Single Page Navigation Script -->
+    <script>
+        // Single page navigation and scroll handling
+        $(document).ready(function() {
+            var sections = $('section[id]');
+            var navLinks = $('#mobile-menu a[href^="#"]');
+            var headerHeight = $('.header').outerHeight() || 80;
+            var scrollTimeout;
+            var isScrolling = false;
+            
+            // Handle click on navigation links - immediate response
+            navLinks.on('click', function(e) {
+                var target = $(this).attr('href');
+                if (target && target !== '#') {
+                    e.preventDefault();
+                    e.stopImmediatePropagation(); // Prevent other handlers completely
+                    
+                    var targetSection = target === '#home' ? $('section#home') : $(target);
+                    if (targetSection.length && !isScrolling) {
+                        isScrolling = true;
+                        var targetTop = target === '#home' ? 0 : targetSection.offset().top - headerHeight;
+                        
+                        // Update active state immediately (before scroll)
+                        navLinks.parent().removeClass('active');
+                        $(this).parent().addClass('active');
+                        
+                        // Stop any ongoing scroll animations immediately
+                        $('html, body').stop(true, true);
+                        
+                        // Start scroll animation immediately
+                        $('html, body').animate({
+                            scrollTop: targetTop
+                        }, {
+                            duration: 100,
+                            easing: 'swing',
+                            complete: function() {
+                                isScrolling = false;
+                            }
+                        });
+                        
+                        // Update URL without reload
+                        if (history.pushState) {
+                            history.pushState(null, null, target);
+                        }
+                    }
+                }
+            });
+            
+            // Update active state on scroll with throttling
+            $(window).on('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(function() {
+                    var scrollPos = $(window).scrollTop() + headerHeight + 50;
+                    var currentSection = '';
+                    
+                    sections.each(function() {
+                        var top = $(this).offset().top;
+                        var bottom = top + $(this).outerHeight();
+                        var id = $(this).attr('id');
+                        
+                        if (scrollPos >= top && scrollPos < bottom) {
+                            currentSection = id;
+                            return false; // break loop
+                        }
+                    });
+                    
+                    if (currentSection) {
+                        navLinks.parent().removeClass('active');
+                        var activeLink = navLinks.filter('[href="#' + currentSection + '"]');
+                        if (activeLink.length) {
+                            activeLink.parent().addClass('active');
+                        } else {
+                            // Fallback: if at top, highlight home
+                            if ($(window).scrollTop() < 100) {
+                                navLinks.filter('[href="#home"]').parent().addClass('active');
+                            }
+                        }
+                    }
+                }, 100);
+            });
+            
+            // Handle logo click
+            $('.header__logo a').on('click', function(e) {
+                var href = $(this).attr('href');
+                if (href === '#home' || href === '#' || (href && href.indexOf('index.html') !== -1)) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    
+                    if (!isScrolling) {
+                        isScrolling = true;
+                        
+                        // Stop any ongoing scroll animations immediately
+                        $('html, body').stop(true, true);
+                        
+                        // Immediate scroll
+                        $('html, body').animate({
+                            scrollTop: 0
+                        }, {
+                            duration: 600,
+                            easing: 'swing',
+                            complete: function() {
+                                isScrolling = false;
+                            }
+                        });
+                        
+                        navLinks.parent().removeClass('active');
+                        navLinks.filter('[href="#home"]').parent().addClass('active');
+                        if (history.pushState) {
+                            history.pushState(null, null, '#home');
+                        }
+                    }
+                }
+            });
+            
+            // Handle browser back/forward buttons
+            $(window).on('popstate', function() {
+                var hash = window.location.hash || '#home';
+                var targetSection = hash === '#home' ? $('section#home') : $(hash);
+                if (targetSection.length) {
+                    var targetTop = hash === '#home' ? 0 : targetSection.offset().top - headerHeight;
+                    
+                    // Stop any ongoing animations
+                    $('html, body').stop(true, false);
+                    
+                    $('html, body').animate({
+                        scrollTop: targetTop
+                    }, 400, 'swing');
+                    navLinks.parent().removeClass('active');
+                    navLinks.filter('[href="' + hash + '"]').parent().addClass('active');
+                }
+            });
+            
+            // Initialize active state on page load
+            var hash = window.location.hash;
+            if (hash) {
+                var targetSection = $(hash);
+                if (targetSection.length) {
+                    setTimeout(function() {
+                        $('html, body').scrollTop(targetSection.offset().top - headerHeight);
+                        navLinks.parent().removeClass('active');
+                        navLinks.filter('[href="' + hash + '"]').parent().addClass('active');
+                    }, 100);
+                }
+            } else {
+                navLinks.filter('[href="#home"]').parent().addClass('active');
+            }
+        });
+    </script>
 </body>
 
 </html>
