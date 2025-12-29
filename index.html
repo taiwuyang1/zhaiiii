@@ -30,6 +30,203 @@
         section[id] {
             scroll-margin-top: 100px;
         }
+        
+        /* Work Modal Styles */
+        .work-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            flex-direction: column;
+        }
+        
+        .work-modal.active {
+            display: flex;
+            opacity: 1;
+        }
+        
+        .work-modal__header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 10001;
+            min-height: 80px;
+        }
+        
+        .work-modal__header-content {
+            flex: 1;
+            padding-right: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .work-modal__icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .work-modal__icon svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .work-modal__header h2 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.4;
+            position: relative;
+            padding-bottom: 8px;
+        }
+        
+        .work-modal__header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            /* background-color: #4CAF50; */
+        }
+        
+        .work-modal__close {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border: 2px solid #333;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #333;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        .work-modal__close:hover {
+            background-color: #333;
+            color: #fff;
+            transform: translateY(-50%) rotate(90deg);
+        }
+        
+        .work-modal__close::before,
+        .work-modal__close::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 18px;
+            background-color: currentColor;
+        }
+        
+        .work-modal__close::before {
+            transform: rotate(45deg);
+        }
+        
+        .work-modal__close::after {
+            transform: rotate(-45deg);
+        }
+        
+        .work-modal__container {
+            margin-top: 80px;
+            width: 100%;
+            height: calc(100% - 80px);
+            overflow-y: auto;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            background-color: #f1f1f1;
+        }
+        
+        .work-modal__content {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .work-modal__content .title {
+            display: none; /* Hide original title since it's in header */
+        }
+        
+        .work-modal-trigger {
+            transition: color 0.3s ease;
+        }
+        
+        .work-modal-trigger:hover {
+            color: #007bff;
+        }
+        
+        @media (max-width: 768px) {
+            .work-modal__header {
+                padding: 15px 50px 15px 20px;
+                min-height: 70px;
+            }
+            
+            .work-modal__header h2 {
+                font-size: 20px;
+            }
+            
+            .work-modal__header-content {
+                padding-right: 50px;
+            }
+            
+            .work-modal__icon {
+                width: 32px;
+                height: 32px;
+                margin-bottom: 8px;
+            }
+            
+            .work-modal__close {
+                right: 15px;
+                width: 35px;
+                height: 35px;
+            }
+            
+            .work-modal__close::before,
+            .work-modal__close::after {
+                height: 16px;
+            }
+            
+            .work-modal__container {
+                margin-top: 70px;
+                height: calc(100% - 70px);
+                padding: 20px 15px;
+            }
+            
+            .work-modal__content {
+                padding: 30px 20px;
+            }
+        }
     </style>
 </head>
 
@@ -781,10 +978,10 @@
         <!-- |=====|| Research Agenda Start ||===============| -->
         <section id="research" class="feature1 home3 mt-120">
             <div class="content_box_pob_120_90">
-                <div class="container_m_40 container_l">
+                <div class="container_m_40 container_l" style="background-color: #fff;">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2 col_padding">
-                            <div class="title text-center mb-60">
+                            <div class="title text-center mb-60 pt-40">
                                 <h5>Research Agenda</h5>
                                 <h2>The long-term questions guiding my work</h2>
                             </div>
@@ -916,7 +1113,7 @@
                         <div class="col-lg-8 offset-lg-2 col_padding">
                             <div class="title text-center mb-60">
                                 <h5>Selected Work</h5>
-                                <h2>Projects built to produce <span>evidence</span> and deployable artifacts</h2>
+                                <h2>Projects built to produce evidence and deployable artifacts</h2>
                             </div>
                         </div>
                     </div>
@@ -931,12 +1128,8 @@
                                     </div>
                                 </div>
                                 <div class="blog1__item__content">
-                                    <h2>Vietnam SDG4: Evidence-to-Policy Pipeline</h2>
+                                    <h2 data-modal-target="un-escap" class="work-modal-trigger" style="cursor: pointer;">Vietnam SDG4: Evidence-to-Policy Pipeline</h2>
                                     <p>An end-to-end workflow connecting SDG indicators to equity diagnostics, uncertainty-aware reporting, and implementable intervention packages for local decision-makers.</p>
-                                    <a class="btn2" href="#un-escap">
-                                        <img src="static/picture/png-icon-11.png" alt="PNG">
-                                        <span>Read</span>
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -950,12 +1143,8 @@
                                     </div>
                                 </div>
                                 <div class="blog1__item__content">
-                                    <h2>Canvas LMS Augmentation (Communication → Workflows → Integrity)</h2>
+                                    <h2 data-modal-target="heternal-canvas" class="work-modal-trigger" style="cursor: pointer;">Canvas LMS Augmentation (Communication → Workflows → Integrity)</h2>
                                     <p>A lightweight AI augmentation layer for Canvas that improves course communication and assignment workflows through traceable data pipelines and reproducible RAG + prompting modules.</p>
-                                    <a class="btn2" href="#heternal-canvas">
-                                        <img src="static/picture/png-icon-11.png" alt="PNG">
-                                        <span>Read</span>
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -969,12 +1158,8 @@
                                     </div>
                                 </div>
                                 <div class="blog1__item__content">
-                                    <h2>MAIC: Real-world Quasi-Experiment &amp; Compensatory Effects</h2>
+                                    <h2 data-modal-target="tsinghua-maic" class="work-modal-trigger" style="cursor: pointer;">MAIC: Real-world Quasi-Experiment &amp; Compensatory Effects</h2>
                                     <p>A high-stakes, school-based evaluation of AI-enabled classroom delivery with quasi-experimental design, mechanism analysis, and equity-oriented interpretation.</p>
-                                    <a class="btn2" href="#tsinghua-maic">
-                                        <img src="static/picture/png-icon-11.png" alt="PNG">
-                                        <span>Read</span>
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -988,12 +1173,8 @@
                                     </div>
                                 </div>
                                 <div class="blog1__item__content">
-                                    <h2>Multimodal Classroom Analytics + AI Micro-Strategies</h2>
+                                    <h2 data-modal-target="heternal-multimodal" class="work-modal-trigger" style="cursor: pointer;">Multimodal Classroom Analytics + AI Micro-Strategies</h2>
                                     <p>A classroom process-data system that transforms multimodal signals into calibrated, teacher-executable micro-strategies—designed for feasibility, interpretability, and fairness monitoring.</p>
-                                    <a class="btn2" href="#heternal-multimodal">
-                                        <img src="static/picture/png-icon-11.png" alt="PNG">
-                                        <span>Read</span>
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -1007,12 +1188,8 @@
                                     </div>
                                 </div>
                                 <div class="blog1__item__content">
-                                    <h2>Yuanfudao — Learning Analytics &amp; Causal Evaluation for Personalization</h2>
+                                    <h2 data-modal-target="yuanfudao" class="work-modal-trigger" style="cursor: pointer;">Yuanfudao — Learning Analytics &amp; Causal Evaluation for Personalization</h2>
                                     <p>Built a consistent measurement and evaluation stack—data contracts, KPI trees, IRT/BKT calibration, and experiment design—connecting learning outcomes to deployable decision support.</p>
-                                    <a class="btn2" href="#yuanfudao">
-                                        <img src="static/picture/png-icon-11.png" alt="PNG">
-                                        <span>Read</span>
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -1026,12 +1203,8 @@
                                     </div>
                                 </div>
                                 <div class="blog1__item__content">
-                                    <h2>Zuoyebang — Backward Design + Measurement-Driven Course Production (Pre-A1/A1 English)</h2>
+                                    <h2 data-modal-target="zuoyebang" class="work-modal-trigger" style="cursor: pointer;">Zuoyebang — Backward Design + Measurement-Driven Course Production (Pre-A1/A1 English)</h2>
                                     <p>Designed a coherent "goals–content–assessment" system with learning progression, item calibration, fairness checks, and production-ready quality control for large-scale delivery.</p>
-                                    <a class="btn2" href="#zuoyebang">
-                                        <img src="static/picture/png-icon-11.png" alt="PNG">
-                                        <span>Read</span>
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -1046,7 +1219,7 @@
 
         <!-- |==========================================| -->
         <!-- |=====|| Work Details Start ||===============| -->
-        <section>
+        <section style="display: none;">
             <div class="content_box_120">
                 <div class="container_m container_l">
                     <div class="row">
@@ -1160,7 +1333,7 @@
                         <p><strong>Artifacts:</strong> Coverage matrix + learning progression spec, item specs + rubric-based QC system, and analytics dashboard design (cohort and item-level diagnostics).</p>
                     </div>
 
-                    <div id="tal" class="mb-60">
+                    <!-- <div id="tal" class="mb-60">
                         <div class="title mb-30">
                             <h5>Early math learning</h5>
                             <h2>TAL Education Group — Pre-K to G3 Math: Learning Progression → Interaction Design → Evidence Gates</h2>
@@ -1174,7 +1347,7 @@
                             <li>Reusable "learn–practice–assess–review" production system</li>
                         </ul>
                         <p><strong>Artifacts:</strong> Course blueprint + coverage matrix, interaction and explanation templates (controlled), and evaluation and reporting pack (dashboards + weekly review templates).</p>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -1191,7 +1364,7 @@
                     <div class="row">
                         <div class="col-lg-10">
                             <div class="title mb-30">
-                                <h5>CV</h5>
+                                <!-- <h5>CV</h5> -->
                                 <h2>Curriculum Vitae</h2>
                             </div>
                             <p>For a concise summary of my academic background, research, and professional work, download my CV below.</p>
@@ -1217,69 +1390,7 @@
 
         <!-- |==========================================| -->
         <!-- |=====|| Contact Start ||===============| -->
-        <section id="contact" class="service1">
-            <div class="service1__padding">
-                <div class="container_m container_l">
-                    <div class="row">
-                        <div class="col-lg-8 offset-lg-2">
-                            <div class="title text-center mb-60">
-                                <h5>Contact</h5>
-                                <h2>Get in touch</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row service1_row">
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="service1__item">
-                                <div class="service1__item__thumb">
-                                    <img src="static/picture/png-img-06.png" alt="Icon">
-                                </div>
-                                <h4>Email</h4>
-                                <p><a href="mailto:caesar.su7@gmail.com">caesar.su7@gmail.com</a></p>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="service1__item">
-                                <div class="service1__item__thumb">
-                                    <img src="static/picture/png-img-07.png" alt="Icon">
-                                </div>
-                                <h4>LinkedIn</h4>
-                                <p><a href="#" aria-label="LinkedIn profile">Add your LinkedIn link</a></p>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="service1__item">
-                                <div class="service1__item__thumb">
-                                    <img src="static/picture/png-img-08.png" alt="Icon">
-                                </div>
-                                <h4>GitHub</h4>
-                                <p><a href="#" aria-label="GitHub profile">Add your GitHub link</a></p>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="service1__item">
-                                <div class="service1__item__thumb">
-                                    <img src="static/picture/png-img-09.png" alt="Icon">
-                                </div>
-                                <h4>Google Scholar</h4>
-                                <p><a href="#" aria-label="Google Scholar profile">Add your Google Scholar link</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-8 offset-lg-2 text-center">
-                            <p class="mt-35">I'm always open to conversations about evidence-based EdTech, learning measurement, AI classroom evaluation, and translating research into scalable systems.</p>
-                            <div class="d-flex flex-wrap gap-3 justify-content-center mt-35">
-                                <div class="main_btn">
-                                    <a href="mailto:caesar.su7@gmail.com">Email me</a>
-                                </div>
-                                <a href="mailto:caesar.su7@gmail.com?subject=Schedule a chat" class="btn3">Schedule a chat</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
         <!-- |=====|| Contact End ||=================| -->
         <!-- |==========================================| -->
 
@@ -1616,6 +1727,134 @@
                 navLinks.filter('[href="#home"]').parent().addClass('active');
             }
         });
+    </script>
+    
+    <!-- Work Modal -->
+    <div id="workModal" class="work-modal">
+        <div class="work-modal__header">
+            <div class="work-modal__header-content" id="workModalHeader">
+                <div class="work-modal__icon" id="workModalIcon">
+                    <!-- Icon will be dynamically inserted here -->
+                </div>
+                <!-- Title will be dynamically inserted here -->
+            </div>
+            <button class="work-modal__close" id="workModalClose" aria-label="Close modal"></button>
+        </div>
+        <div class="work-modal__container">
+            <div class="work-modal__content" id="workModalContent">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Work Modal Functionality
+        (function($) {
+            'use strict';
+            
+            var $modal = $('#workModal');
+            var $modalHeader = $('#workModalHeader');
+            var $modalIcon = $('#workModalIcon');
+            var $modalContent = $('#workModalContent');
+            var $modalClose = $('#workModalClose');
+            var $triggers = $('.work-modal-trigger');
+            
+            // Icon SVG generator
+            function generateIcon() {
+                return '<svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="256" height="256">' +
+                    '<path d="M748.034273 709.083657l209.590506 1.49812c0-109.090581-53.345975-265.148869-191.627389-265.148869-73.783447 0-114.829282 38.08541-146.035004 91.313705C683.394067 568.621579 721.48971 639.939881 748.034273 709.083657z" fill="#4CAF50"></path>' +
+                    '<path d="M765.998413 162.557306c-38.791491 0-73.845869 15.980973-98.957803 41.709961 25.303292 32.582069 40.376593 73.506131 40.376593 117.953436 0 32.739659-8.184403 63.564711-22.602787 90.557482 22.798239 16.564257 50.847062 26.339902 81.183997 26.339902 76.371388 0 138.281413-61.910025 138.281413-138.279367C904.279826 224.467331 842.369801 162.557306 765.998413 162.557306z" fill="#4CAF50"></path>' +
+                    '<path d="M244.762051 708.061374l-209.590506 1.49812c0-109.090581 53.345975-265.148869 191.627389-265.148869 73.783447 0 114.829282 38.08541 146.035004 91.313705C309.402257 567.599296 271.306614 638.917598 244.762051 708.061374z" fill="#4CAF50"></path>' +
+                    '<path d="M226.797911 161.535023c38.791491 0 73.845869 15.980973 98.957803 41.709961-25.303292 32.582069-40.376593 73.506131-40.376593 117.953436 0 32.739659 8.184403 63.564711 22.602787 90.557482-22.798239 16.564257-50.847062 26.339902-81.183997 26.339902-76.371388 0-138.281413-61.910025-138.281413-138.279367C88.516498 223.445048 150.426523 161.535023 226.797911 161.535023z" fill="#4CAF50"></path>' +
+                    '<path d="M235.001757 888.627846c0-151.851477 68.170612-365.312126 260.653485-365.312126 192.483896 0 266.739087 217.228463 266.739087 369.07994" fill="#4CAF50"></path>' +
+                    '<path d="M495.656265 322.042647m-192.482873 0a188.099 188.099 0 1 0 384.965745 0 188.099 188.099 0 1 0-384.965745 0Z" fill="#4CAF50"></path>' +
+                    '</svg>';
+            }
+            
+            // Open modal function
+            function openModal(targetId) {
+                var $targetContent = $('#' + targetId);
+                if ($targetContent.length) {
+                    // Clone the content
+                    var contentClone = $targetContent.clone();
+                    // Remove the id to avoid duplicate IDs
+                    contentClone.removeAttr('id');
+                    
+                    // Extract title (h2) from the cloned content
+                    var $titleElement = contentClone.find('.title h2');
+                    var titleText = '';
+                    if ($titleElement.length) {
+                        titleText = $titleElement.text();
+                        // Remove title from content since it will be in header
+                        contentClone.find('.title').remove();
+                    } else {
+                        // Fallback: try to find h2 directly
+                        $titleElement = contentClone.find('h2').first();
+                        if ($titleElement.length) {
+                            titleText = $titleElement.text();
+                            $titleElement.remove();
+                        }
+                    }
+                    
+                    // Set the icon
+                    $modalIcon.html(generateIcon());
+                    
+                    // Clear existing title and set new one
+                    $modalHeader.find('h2').remove();
+                    $modalHeader.append('<h2>' + titleText + '</h2>');
+                    
+                    // Set the content (without title)
+                    $modalContent.html(contentClone);
+                    
+                    // Show modal
+                    $modal.addClass('active');
+                    // Prevent body scroll
+                    $('body').css('overflow', 'hidden');
+                    
+                    // Scroll container to top
+                    $('.work-modal__container').scrollTop(0);
+                }
+            }
+            
+            // Close modal function
+            function closeModal() {
+                $modal.removeClass('active');
+                $('body').css('overflow', '');
+                // Clear content after animation
+                setTimeout(function() {
+                    $modalContent.html('');
+                }, 300);
+            }
+            
+            // Click handler for triggers
+            $triggers.on('click', function(e) {
+                e.preventDefault();
+                var targetId = $(this).data('modal-target');
+                if (targetId) {
+                    openModal(targetId);
+                }
+            });
+            
+            // Close button click
+            $modalClose.on('click', function(e) {
+                e.preventDefault();
+                closeModal();
+            });
+            
+            // Close on background click
+            $modal.on('click', function(e) {
+                if ($(e.target).is($modal)) {
+                    closeModal();
+                }
+            });
+            
+            // Close on ESC key
+            $(document).on('keydown', function(e) {
+                if (e.key === 'Escape' && $modal.hasClass('active')) {
+                    closeModal();
+                }
+            });
+        })(jQuery);
     </script>
 </body>
 
